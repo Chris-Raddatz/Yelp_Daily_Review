@@ -4,7 +4,7 @@ import pandas as pd #Import necessary libraries
 import glob
 import os
 
-dataframe = pd.DataFrame(columns = ['Rank','Type','Business','Rating','Address','Distance From Home','Date of Ranking']) #Initialize dataframe to append our data to
+dataframe = pd.DataFrame() #Initialize dataframe to append our data to
 
 path = r"C:\Users\Chris\OneDrive\Documents\Yelp Ratings" # Path of our csv
 all_files = glob.glob(os.path.join(path , "*.csv")) #Takes all csv files in our folder and converts them to a list
