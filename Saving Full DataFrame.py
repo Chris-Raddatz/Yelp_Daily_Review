@@ -6,7 +6,7 @@ import os
 
 dataframe = pd.DataFrame() #Initialize dataframe to append our data to
 
-path = r"C:\Users\Chris\OneDrive\Documents\Yelp Ratings" # Path of our csv
+path = r"C:\Users\Chris\Documents\Yelp Ratings" # Path of our csv
 all_files = glob.glob(os.path.join(path , "*.csv")) #Takes all csv files in our folder and converts them to a list
 
 li = [] #Initialize list
@@ -21,6 +21,6 @@ print(dataframe)
 
 #Save the new summary dataframe into a new folder, so it doesn't get lumped in when we create the summary table
 from pathlib import Path  
-filepath = Path(r"C:\Users\Chris\OneDrive\Documents\Yelp Ratings\Summary Table\Summary Ratings.csv")  
+filepath = Path(r"C:\Users\Chris\Documents\Yelp Ratings\Summary Table\Summary Ratings.csv")  
 filepath.parent.mkdir(parents=True, exist_ok=True)  
 dataframe.to_csv(filepath, index = False) 
