@@ -6,14 +6,13 @@ import pandas as pd
 from pandas import json_normalize
 api_url = "https://api.yelp.com/v3/businesses/search"
 
-# Get data about NYC cafes from the Yelp API
 api_key = 'Your key' #Personal API key
 
 
 params = {"term" : "restaurants",
           "location" : "Austin, TX 78750"} #Looking for restaurants in Austin TX
 headers = {"Authorization": "Bearer {}".format(api_key)}
-# Get data about NYC cafes from the Yelp API
+
 response = requests.get(api_url, 
                         headers=headers, 
                         params=params) #Pulls data with our api key, parameters and the url at top
